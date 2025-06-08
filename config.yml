@@ -1,0 +1,30 @@
+BITCOIN_SYMBOL:
+- Select symbol
+- FILUSDT
+- BNBUSDT
+- ETCUSDT
+- DOTUSDT
+- XTZUSDT
+- WAVESUSDT
+- LPTUSDT
+- TRBUSDT
+- BNBUSDT
+- FXSUSDT
+- ADAUSDT
+- FTTUSDT
+- DOGEUSDT
+- LINKUSDT
+BITCOIN_TIME_INTERVAL:
+- 1d
+- 6h
+- 1h
+- 30m
+- 15m
+BITCOIN_TRADING_INTERVAL:
+- 15m
+- 6h
+- 1h
+- 30m
+- 1d
+default_num_of_day: 100
+default_start_trading: 7

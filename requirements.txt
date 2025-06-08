@@ -1,0 +1,15 @@
+streamlit
+pandas
+sklearn
+numpy
+# pip
+scipy
+xgboost
+statsmodels
+joblib
+matplotlib
+seaborn
+boto3
+pyyaml
+flask
+

@@ -1,0 +1,1 @@
+from app_streamlit import house_price_streamlit
