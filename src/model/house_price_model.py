@@ -30,8 +30,8 @@ from sklearn import model_selection
 from sklearn.model_selection import train_test_split
 
 # Regression
-import statsmodels.api as sm
-from statsmodels.stats.outliers_influence import variance_inflation_factor
+#import statsmodels.api as sm
+#from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn.linear_model import LinearRegression,Ridge,Lasso,RidgeCV,ElasticNet,LogisticRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor,BaggingRegressor,GradientBoostingRegressor,AdaBoostRegressor
