@@ -14,6 +14,7 @@ from io import BytesIO
 import ast
 
 from src import config as cf
+from src.util import data_manager as dm
 from src.model import house_price_module as hp 
 #from src.util import regression_util as regu
 project_name = 'house_price'
