@@ -8,7 +8,7 @@ boto3
 pyyaml
 flask
 statsmodels
-scikit-learn=1.3.2
+scikit-learn
 
 #pip install -U scikit-learn==1.3.2
 
