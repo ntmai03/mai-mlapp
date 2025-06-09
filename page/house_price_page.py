@@ -39,6 +39,25 @@ def app():
         st.write("This is a demo tool to predict house price based on the characteristics of the house such as how many rooms the home has or how much crime there is in the area plus a whole bunch of factors")
         st.markdown('<p style="color:Green; font-size: 25px;"> Machine Learning Model</p>', unsafe_allow_html=True)
         st.write("It is a regression problem, the project employ xgboost technique to build the predictive model that allows to predict price of a given house")
+    
+    if task_option == 'Data Processing':
+        hp.train_test_data("kc_house_data", "local",version)
+        train_df = dm.read_csv_file(os.path.join(cf.DATA_PATH, 'input'), "kc_house_data_train_" + version + ".csv", "local")
+        test_df = dm.read_csv_file(os.path.join(cf.DATA_PATH, 'input'), "kc_house_data_test_" + version + ".csv", "local")
+        cleaned_train_df = hp.clean_data(train_df)
+        cleaned_test_df = hp.clean_data(test_df)
+        X_train = hp.data_processing_pipeline(train_df,1)
+        X_test = hp.data_processing_pipeline(test_df,2)
+        y_train = cleaned_train_df['price']
+        y_test = cleaned_test_df['price']
+        st.write(X_train.shape,X_test.shape)
+        st.write(X_train.columns)
+        st.write(X_test.columns)
+
+        result = hp.train_xgboost(X_train, y_train, version)
+        st.write(result.score(X_train, y_train))
+        st.write(result.score(X_test, y_test))        
+
     if task_option == 'Prediction':
         st.write("#### Input your data for prediction")
         bedrooms = st.text_input("Num of bedrooms", '3')
