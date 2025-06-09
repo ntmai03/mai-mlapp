@@ -1,0 +1,1 @@
+from page import house_price_page

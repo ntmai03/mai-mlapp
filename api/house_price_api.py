@@ -11,7 +11,7 @@ import os
 import sys
 import joblib
 from src import config as cf
-from src.analysis.house_price_model import HousePrice
+from src.model.house_price_model import HousePrice
 
 
 

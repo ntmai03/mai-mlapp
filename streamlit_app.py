@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 from multipage import MultiPage
 from page import introduction
-from page import house_price_page
+from page import house_price_streamlit
 
 # Config layout
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
@@ -26,8 +26,21 @@ with col3:
 app = MultiPage(col1)
 # Add all applications here
 app.add_page("Select Application", introduction.app)
-app.add_page("01-Regression Application", house_price_page.app)
 
 
-# The main app
-app.run()
+'''
+pages = ['Introduction',
+         'House Price',
+         'Coin Trading Bot']
+
+page_option = st.sidebar.selectbox('', pages)
+st.sidebar.header('')
+
+if(page_option == 'Introduction'):
+   st.write('Introduction')
+if(page_option == 'House Price'):
+   house_price_streamlit.app()
+if(page_option == 'Coin Trading Bot'):
+   st.write('Coin Trading Bot')
+'''
+
